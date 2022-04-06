@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js
+"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+</head>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+       
+      Seminario de Sistemas Aux
+    </a>
+    <a class="navbar-brand" href="#">
+       
+      2022
+    </a>
+  </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+       
+     Fanor choque Aguirre
+    </a>
+  
+  </div>
+</nav>
+<body style="font-family: sans-serif; ">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Practica N°1</a>
+      </div>
+    </nav>
+  </div>
+</div><div class="form-row text-center">
+  <div style="height: 500px;">
+    
+    <button  class="btn btn-danger btn-block" href="#" role="button">Realiza un script que pida la edad y si es mayor de 18 años indica que ya puede conducir.</button>
+    <button   id="btn1" type="button" class="btn btn-success">Respuesta 1</button>
+    <button  class="btn btn-danger btn-block" href="#" role="button"> Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un 
+      «alert» y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.</button>  
+ 
+        <button  id="btn2" type="button" class="btn btn-success">Respuesta 2</button>
+        <button  class="btn btn-danger btn-block" href="#" role="button"> Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor.</button>  
+     
+            <button  id="btn3" type="button" class="btn btn-success">Respuesta 3</button>
+            <button  class="btn btn-danger btn-block" href="#" role="button"> enera 3 números aleatorios entre 1 y 99 pero que no se repita ninguno</button>  
+     
+            <button  id="btn4" type="button" class="btn btn-success">Respuesta 4</button>
+        
+  
+  
+ </div>
+  
+  <script>
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
+btn1.onclick= () => {
+Swal.fire({
+        title: "Introduce tu Edad",
+        input: "text",
+        showCancelButton: false,
+        confirmButtonText: "Guardar",
+        cancelButtonText: "Cancelar",
+    })
+    .then(resultado => {
+        if (resultado.value >= 18) {
+            let edad = resultado.value;
+            Swal.fire("Puedes Conducir tienes:" + edad + "años");
+        }
+        else {
+            Swal.fire("Introduce un numero válido");
+  }
+    });
+}
+btn2.onclick= () => {
+
+  Swal.fire({
+        title: "Introduce tu Edad",
+        input: "text",
+        showCancelButton: false,
+        confirmButtonText: "Guardar",
+        cancelButtonText: "Cancelar",
+    })
+    .then(resultado => {
+let edad, final; 
+ edad = resultado.value, "0"; 
+ if (isNaN(edad)) { 
+   final = "Error. No es un número"; 
+ } else { 
+ final = (edad < 18) ? "Eres Menor de Edad no Puedes Conducir" : "Puedes Conducir eres Mayor de edad tienes: "+ edad + "años"  } 
+ Swal.fire(final); 
+});
+}
+
+
+  </script>
+</body>
+</html>
